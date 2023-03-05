@@ -5,17 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Fraunces">
   
   <title>Frontend Mentor | Product preview card component</title>
 
   
   <style>
-    @media screen and (max-width: 1440px){
+    /* desktop layout */
+    @media only screen and (max-width: 1440px){
       body{
-        background-color: #F0F0F0;
+        /* background-color: #F0F0F0; */
+        background-image: url(backimage.jpg);
       }
       .divmain{
-        background-color: #F0F0F0;
+        /* background-color: #F0F0F0; */
         width: 100%;
         height: 500px;
         display: flex;
@@ -24,27 +28,116 @@
       }
       .div1{
         background-color: #F3EAE3;
-        height: 400px;
+        height: 370px;
         width: 1250px;
         box-shadow: 5px 16px 16px rgb(219, 216, 216);
         display: flex;
         justify-content: center;
-        padding-top: 30px;
+        padding-top: 70px;
         
       }
       .divinside{ 
         background-color: #F0F0F0;
         height: 300px;
-        width: 540px;
+        width: 420px;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: 210px 210px;
+        
+      }
+      
+      .img{
+        border-radius: 15px 0px 0px 15px;
+      }
+
+      .h1{
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        color: rgb(165, 161, 161);
+        text-shadow: 2px 2px 4px rgb(206, 195, 195);
+        letter-spacing: 3px;
+        font-weight:lighter
+      }
+      #info{
+        padding: 15px 30px;
+      }
+
+      .h2{
+        font-family:"Fraunces", Georgia, 'Times New Roman', Times, serif;
+        font-size: 18px;
+        font-weight: bolder;
+        
+      }
+      .p{
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        color: rgb(138, 135, 135);
+        text-shadow: 0px 0px 3px rgb(206, 195, 195);
+        font-weight:lighter
+
+      }
+     
+      .p1{
+        color: darkgreen;
+        font-family:"Fraunces", Georgia;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      .diffp1{
+        font-size: 11px;
+        padding-left: 8px;
+        color: gray;
+        text-decoration:line-through;
+        padding-bottom: 2px;
+        vertical-align: middle;
+      }
+      .cartbutton{
+        color: #f8f5f5;
+        background-color: rgb(50, 110, 50);
+        width: 150px;
+        height: 28px;
+        padding: 3px;
+        text-align: center;
+        border-radius: 5px;
+        
+         
+      }
+      
+      .button{
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 15px;
       }
     }
+
+    /* Mobile layout */
+    @media only screen and (max-width: 375px){
+      body{
+        color: black;
+        
+      }
+    }
+
+
   </style>
 </head>
 <body>
 
   <div class="divmain">
     <div class="div1">
-      <div class="divinside">  </div>
+      <div class="divinside">  
+        <div class="divi">
+          <input class= "img" type="image" src="image-product-desktop.jpg" alt="perfume bottle" height="300px" width="210px">
+        </div>
+        <div class="divi" id="info">
+          <h1 class="h1">PERFUME</h1>
+          <h2 class="h2">Gabrielle Essence Eau De Parfum</h2>
+          <p class="p">A floral, solar and voluptuous interpretation compound by Olivier Polge, Perfumer Creator for the house of CHANEL.</p>
+          <p class="p1">$149.99 <span class="diffp1">$169.99</span></p>
+          <p class="cartbutton"><span class="cartemoji">🛒</span> <span class="button">Add to Cart</span></p>
+        </div>
+        
+      </div>
 
     </div>
   </div>
